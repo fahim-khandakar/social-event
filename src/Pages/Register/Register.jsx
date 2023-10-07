@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../../Providers/AuthProviders";
+import swal from "sweetalert";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 const Register = () => {
-  const handleRegister = (e) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { signInWithGoogle, createUser } = useContext(AuthContext);
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
@@ -9,8 +18,47 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
+    if (password.length < 6) {
+      return swal(
+        "Error!",
+        "Password should be at least 6 characters!",
+        "error"
+      );
+    } else if (!/[A-Z]/.test(password)) {
+      return swal("Error!", "Password must have a capital letter!", "error");
+    } else if (!/[^a-zA-Z0-9\s]/.test(password)) {
+      return swal("Error!", "Password must have a special character!", "error");
+    }
 
+    createUser(email, password, name)
+      .then((result) => {
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {
+            navigate(location?.state ? location.state : "/");
+
+            console.log(result.user.displayName);
+          })
+          .catch();
+        swal("Success!", "Successfully Account Created", "success");
+        e.target.reset();
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     console.log(name, photo, email, password);
+  };
+
+  const handleLoginWithGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="max-w-6xl mx-auto p-5 md:p-0 mt-10">
@@ -81,6 +129,11 @@ const Register = () => {
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Register</button>
+          </div>
+          <div className="flex justify-center mt-5">
+            <button className="btn btn-ghost" onClick={handleLoginWithGoogle}>
+              <FcGoogle></FcGoogle> Google
+            </button>
           </div>
         </form>
       </div>

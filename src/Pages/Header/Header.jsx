@@ -1,7 +1,14 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
+import Profile from "../Profile/Profile";
 
 const Header = () => {
+  const { logOut, user, loading } = useContext(AuthContext);
+  const signOut = () => {
+    logOut().then().catch();
+  };
   const navLinks = (
     <>
       <li>
@@ -51,10 +58,20 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="gap-10 menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end">
-          <li className="list-none">
-            <NavLink to="/login">Login</NavLink>
-          </li>
+        <div className="navbar-end gap-5">
+          <Profile></Profile>
+
+          <div>
+            {user ? (
+              <li className="list-none">
+                <button onClick={signOut}>Sign Out</button>
+              </li>
+            ) : (
+              <li className="list-none">
+                <NavLink to="/login">Login</NavLink>
+              </li>
+            )}
+          </div>
         </div>
       </div>
     </div>
