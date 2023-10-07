@@ -8,16 +8,16 @@ const Header = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/about">About</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact Us</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="bg-[#000000af] w-full fixed right-0 left-0">
+    <div className="bg-[#000000af] w-full ">
       <div className="navbar font-serif text-white mx-auto max-w-6xl px-5 md:px-0 ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -39,7 +39,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="gap-10 menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="gap-10 menu-sm dropdown-content text-black mt-1 z-[1] p-2 shadow bg-base-200 rounded-box w-52"
             >
               {navLinks}
             </ul>

@@ -3,6 +3,8 @@ import Home from "../Pages/Home/Home";
 import Root from "./Root";
 import Error from "../Error page/Error";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
         path: "/serviceDetails/:id",
         loader: () => fetch("/data.json"),
         element: <ServiceDetails></ServiceDetails>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
     ],
   },
