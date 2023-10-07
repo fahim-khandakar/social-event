@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -52,7 +52,9 @@ const Header = () => {
           <ul className="gap-10 menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="px-5 py-1 hover:btn">Button</a>
+          <li className="list-none">
+            <NavLink to="/login">Login</NavLink>
+          </li>
         </div>
       </div>
     </div>

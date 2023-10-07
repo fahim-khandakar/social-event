@@ -1,7 +1,7 @@
-import banner from "../../assets/aboutBanner.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import banner from "../../assets/banner3.jpg";
 const About = () => {
   useEffect(() => {
     AOS.init();
@@ -21,7 +21,9 @@ const About = () => {
           data-aos="fade-left"
           data-aos-duration="2000"
         >
-          <h1 className="text-4xl font-bold font-serif pb-8">Our Story</h1>
+          <h1 className="text-4xl font-bold font-serif pb-2">
+            Our Beginnings and Aspirations
+          </h1>
           <p>
             Welcome to Social Fiesta, where memorable moments and unforgettable
             experiences come to life. Our journey began with a passion for
