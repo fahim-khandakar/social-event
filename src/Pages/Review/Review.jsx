@@ -12,7 +12,7 @@ const Review = () => {
   }, []);
   return (
     <div>
-      <h1 className="text-4xl font-bold my-20 text-center font-serif text-[#403f3f]">
+      <h1 className="text-2xl md:text-4xl font-bold my-10 text-center font-serif text-[#403f3f]">
         Our Clients' Reviews.
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
