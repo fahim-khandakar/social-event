@@ -1,10 +1,7 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProviders";
 
 /* eslint-disable react/prop-types */
 const Services = ({ item }) => {
-  const { user } = useContext(AuthContext);
   const { id, name, description, image, price } = item;
   return (
     <div className=" card-compact  bg-base-100 shadow-xl">

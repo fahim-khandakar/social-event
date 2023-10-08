@@ -1,10 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 const Contact = () => {
   return (
-    <div className="max-w-6xl mx-auto p-5 md:p-0">
+    <div className="max-w-6xl mx-auto   text-center">
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="flex gap-10 py-5 items-center px-5 flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Contact Us</h1>
+            <h1 className="text-2xl md:text-4xl font-bold">Contact Us</h1>
             <p className="py-6">
               Your feedback matters to us! Whether you have questions,
               suggestions, or just want to say hello, we're here to listen. Our
@@ -21,6 +22,17 @@ const Contact = () => {
             <form className="card-body">
               <div className="form-control">
                 <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
@@ -32,22 +44,17 @@ const Contact = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Message</span>
                 </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  className="input input-bordered"
+                <textarea
+                  type="text"
+                  placeholder="Message..."
+                  className="input input-bordered py-2 h-20"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Send</button>
               </div>
             </form>
           </div>

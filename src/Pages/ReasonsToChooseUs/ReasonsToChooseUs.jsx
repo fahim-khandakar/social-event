@@ -11,11 +11,11 @@ const ReasonsToChooseUs = () => {
     AOS.init();
   }, []);
   return (
-    <div className="mx-auto max-w-6xl px-5 md:px-0 ">
+    <div className="overflow-hidden">
       <h1 className="text-2xl md:text-4xl font-bold mt-20 text-center">
         Why Choose Us for Your Special Event?
       </h1>
-      <p className="pt-5 text-center w-3/4 mx-auto">
+      <p className="pt-5 text-center mx-5 md:mx-auto">
         At Social Fiesta, we understand that your event is more than just an
         occasion; it is a cherished moment that deserves the utmost care and
         attention to detail. Here are some compelling reasons to entrust us with

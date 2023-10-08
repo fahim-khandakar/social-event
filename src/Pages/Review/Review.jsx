@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import clint1 from "../../assets/clint1.jpg";
 import clint2 from "../../assets/clint2.jpg";
 import clint3 from "../../assets/clint3.jpg";
@@ -14,7 +15,7 @@ const Review = () => {
       <h1 className="text-4xl font-bold my-20 text-center">
         our clients' reviews.
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto max-w-6xl p-5 md:p-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div
           className="flex flex-col md:flex-row items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5 "
           data-aos="flip-left"

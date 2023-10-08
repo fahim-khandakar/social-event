@@ -7,7 +7,7 @@ import Review from "../Review/Review";
 const Home = () => {
   const data = useLoaderData();
   return (
-    <div>
+    <div className="max-w-6xl mx-auto p-5 md:p-0">
       <Banner></Banner>
       <div>
         <h1 className="text-2xl md:text-4xl font-bold mt-20 text-center">
