@@ -2,14 +2,24 @@ import clint1 from "../../assets/clint1.jpg";
 import clint2 from "../../assets/clint2.jpg";
 import clint3 from "../../assets/clint3.jpg";
 import clint4 from "../../assets/clint4.jfif";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Review = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <h1 className="text-4xl font-bold my-20 text-center">
         our clients' reviews.
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto max-w-6xl p-5 md:p-0">
-        <div className="flex flex-col md:flex-row items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5">
+        <div
+          className="flex flex-col md:flex-row items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5 "
+          data-aos="flip-left"
+          data-aos-duration="1500"
+        >
           <div>
             <img
               className="rounded-full object-cover h-[150] md:h-[70px] w-[500px]"
@@ -28,7 +38,11 @@ const Review = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row  items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5">
+        <div
+          className="flex flex-col md:flex-row  items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5"
+          data-aos="flip-right"
+          data-aos-duration="1500"
+        >
           <div>
             <img
               className="rounded-full object-cover h-[150] md:h-[70px] w-[500px]"
@@ -46,7 +60,11 @@ const Review = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row  items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5">
+        <div
+          className="flex flex-col md:flex-row  items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5 mt-24"
+          data-aos="flip-up"
+          data-aos-duration="1500"
+        >
           <div>
             <img
               className="rounded-full object-fill w-[500px] h-[150] md:h-[70px]"
@@ -64,7 +82,11 @@ const Review = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row  items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5">
+        <div
+          className="flex flex-col md:flex-row  items-center gap-10 bg-slate-100 rounded-md shadow-lg p-5 mt-24"
+          data-aos="flip-down"
+          data-aos-duration="1500"
+        >
           <div>
             <img
               className="rounded-full object-cover h-[150] md:h-[70px] w-[500px]"

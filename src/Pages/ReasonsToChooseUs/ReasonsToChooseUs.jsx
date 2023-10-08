@@ -2,11 +2,17 @@ import { FaHandshake, FaAngrycreative, FaDollarSign } from "react-icons/fa";
 import { MdSentimentVerySatisfied } from "react-icons/md";
 import { GrUserWorker } from "react-icons/gr";
 import { CgStyle } from "react-icons/cg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ReasonsToChooseUs = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="mx-auto max-w-6xl px-5 md:px-0 ">
-      <h1 className="text-4xl font-bold mt-20 text-center">
+      <h1 className="text-2xl md:text-4xl font-bold mt-20 text-center">
         Why Choose Us for Your Special Event?
       </h1>
       <p className="pt-5 text-center w-3/4 mx-auto">
@@ -15,8 +21,12 @@ const ReasonsToChooseUs = () => {
         attention to detail. Here are some compelling reasons to entrust us with
         the planning and execution of your unforgettable celebration.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
-        <div className="text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-5 my-10">
+        <div
+          className="text-center mt-10"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <div className="flex justify-center text-4xl">
             <FaHandshake></FaHandshake>
           </div>
@@ -30,7 +40,11 @@ const ReasonsToChooseUs = () => {
           </p>
         </div>
         {/* first  */}
-        <div className="text-center">
+        <div
+          className="text-center mt-10"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
           <div className="flex justify-center text-4xl">
             <FaAngrycreative></FaAngrycreative>
           </div>
@@ -42,7 +56,11 @@ const ReasonsToChooseUs = () => {
           </p>
         </div>
         {/* first  */}
-        <div className="text-center">
+        <div
+          className="text-center mt-24"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <div className="flex justify-center text-4xl">
             <FaDollarSign></FaDollarSign>
           </div>
@@ -54,7 +72,11 @@ const ReasonsToChooseUs = () => {
           </p>
         </div>
         {/* first  */}
-        <div className="text-center">
+        <div
+          className="text-center mt-24"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
           <div className="flex justify-center text-4xl">
             <MdSentimentVerySatisfied></MdSentimentVerySatisfied>
           </div>
@@ -66,7 +88,11 @@ const ReasonsToChooseUs = () => {
           </p>
         </div>
         {/* first  */}
-        <div className="text-center">
+        <div
+          className="text-center mt-24"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <div className="flex justify-center text-4xl">
             <GrUserWorker></GrUserWorker>
           </div>
@@ -80,7 +106,11 @@ const ReasonsToChooseUs = () => {
           </p>
         </div>
         {/* first  */}
-        <div className="text-center">
+        <div
+          className="text-center mt-24"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
           <div className="flex justify-center text-4xl">
             <CgStyle></CgStyle>
           </div>

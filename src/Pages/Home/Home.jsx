@@ -10,7 +10,9 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div>
-        <h1 className="text-4xl font-bold mt-20 text-center">Our Services</h1>
+        <h1 className="text-2xl md:text-4xl font-bold mt-20 text-center">
+          Our Services
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 md:p-0 mt-20 mx-auto max-w-6xl">
           {data.map((item) => (
             <Services key={item.id} item={item}></Services>

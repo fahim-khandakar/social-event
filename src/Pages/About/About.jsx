@@ -2,6 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import banner from "../../assets/banner3.jpg";
+import TeamMember from "../TeamMember/TeamMember";
 const About = () => {
   useEffect(() => {
     AOS.init();
@@ -40,6 +41,7 @@ const About = () => {
           </p>
         </div>
       </div>
+      <TeamMember></TeamMember>
     </div>
   );
 };
