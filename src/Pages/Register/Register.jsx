@@ -15,7 +15,6 @@ const Register = () => {
 
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
-    const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
     if (password.length < 6) {
@@ -31,39 +30,38 @@ const Register = () => {
     }
 
     createUser(email, password, name)
-      .then((result) => {
+      .then(() => {
         updateProfile(auth.currentUser, {
           displayName: name,
         })
           .then(() => {
             navigate(location?.state ? location.state : "/");
-
-            console.log(result.user.displayName);
           })
           .catch();
         swal("Success!", "Successfully Account Created", "success");
         e.target.reset();
-        console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        swal("Error!", error.message, "error");
       });
-    console.log(name, photo, email, password);
   };
 
   const handleLoginWithGoogle = () => {
     signInWithGoogle()
-      .then((result) => {
-        console.log(result);
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+        swal("Success!", "Successfully Account Created", "success");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        swal("Error!", error.message, "error");
       });
   };
   return (
     <div className="max-w-6xl mx-auto p-5 md:p-0 mt-10">
       <div>
-        <h2 className="text-5xl font-bold text-center">Please Register</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center">
+          Please Register
+        </h2>
         <form
           onSubmit={handleRegister}
           className="w-full md:w-3/4 lg:w-1/2 mx-auto"
@@ -80,18 +78,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Photo URL</span>
-            </label>
-            <input
-              type="text"
-              name="photo"
-              placeholder="Photo URL"
-              className="input input-bordered"
-              required
-            />
-          </div>
+
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -128,7 +115,7 @@ const Register = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn bg-[#ffa500]">Register</button>
           </div>
           <div className="flex justify-center mt-5">
             <button className="btn btn-ghost" onClick={handleLoginWithGoogle}>

@@ -7,18 +7,20 @@ const Profile = () => {
   return (
     <div>
       {user && (
-        <div className="flex gap-5 items-center">
-          <div>{user.displayName ? user.displayName : name}</div>
+        <div className="flex flex-col-reverse md:flex-row gap-1 md:gap-5 items-center">
+          <div className=" text-xs md:text-base text-center">
+            {user.displayName ? user.displayName : name}
+          </div>
           <div>
             {user.photoURL ? (
               <img
-                className="w-[30px] rounded-full"
+                className="w-[20px] md:w-[30px] rounded-full"
                 src={user.photoURL}
                 alt="User Photo"
               />
             ) : (
               <img
-                className="w-[30px] rounded-full"
+                className="w-[20px] md:w-[30px] rounded-full"
                 src={userDefaultImg}
                 alt="User Photo"
               />

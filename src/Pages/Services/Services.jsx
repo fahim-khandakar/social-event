@@ -20,9 +20,9 @@ const Services = ({ item }) => {
             : description}
         </p>
         <p className="py-5 text-lg font-bold">Price: {price}</p>
-        <div className="card-actions justify-center">
+        <div className="">
           <Link to={`/serviceDetails/${id}`}>
-            <button className="py-1 px-5 btn-ghost rounded-md bg-slate-200">
+            <button className="py-1 bg-[#ffa500] w-full btn-ghost rounded-md text-white">
               Read More
             </button>
           </Link>

@@ -31,9 +31,9 @@ const Banner = () => {
           data-aos="fade-down-right"
           data-aos-duration="2000"
         >
-          <h1 className="text-3xl md:text-7xl  font-bold text-[#000000af]   py-5">
-            <span className="text-3xl md:text-7xl  font-bold text-[#000000af] ">
-              Hey..
+          <h1 className="text-3xl md:text-7xl  font-bold text-[#ffa500]   py-5">
+            <span className="text-3xl md:text-7xl  font-bold text-[#1dc7bdaf] ">
+              Hey...
             </span>{" "}
             <br />
             We Are Ready For Your Events!

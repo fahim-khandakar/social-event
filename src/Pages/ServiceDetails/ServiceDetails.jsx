@@ -9,10 +9,10 @@ const ServiceDetails = () => {
   console.log(name, description);
   return (
     <div className="max-w-6xl mx-auto p-5 md:p-0">
-      <div className="py-24">
-        <div className="h-[400px] ">
+      <div className="py-10">
+        <div className="h-auto ">
           <img
-            className="h-full w-full object-cover rounded-md"
+            className="h-full w-full  object-cover rounded-md"
             src={image}
             alt=""
           />

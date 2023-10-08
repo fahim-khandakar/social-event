@@ -12,8 +12,8 @@ const Review = () => {
   }, []);
   return (
     <div>
-      <h1 className="text-4xl font-bold my-20 text-center">
-        our clients' reviews.
+      <h1 className="text-4xl font-bold my-20 text-center font-serif text-[#403f3f]">
+        Our Clients' Reviews.
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div
@@ -23,7 +23,7 @@ const Review = () => {
         >
           <div>
             <img
-              className="rounded-full object-cover h-[150] md:h-[70px] w-[500px]"
+              className="rounded-md md:rounded-full object-cover  h-[150px] md:h-[70px] w-[500px]"
               src={clint1}
               alt=""
             />
@@ -46,7 +46,7 @@ const Review = () => {
         >
           <div>
             <img
-              className="rounded-full object-cover h-[150] md:h-[70px] w-[500px]"
+              className="rounded-md md:rounded-full object-cover h-[150px] md:h-[70px] w-[500px]"
               src={clint2}
               alt=""
             />
@@ -68,7 +68,7 @@ const Review = () => {
         >
           <div>
             <img
-              className="rounded-full object-fill w-[500px] h-[150] md:h-[70px]"
+              className="rounded-md md:rounded-full object-fill w-[500px] h-[150px] md:h-[70px]"
               src={clint3}
               alt=""
             />
@@ -90,7 +90,7 @@ const Review = () => {
         >
           <div>
             <img
-              className="rounded-full object-cover h-[150] md:h-[70px] w-[500px]"
+              className="rounded-md md:rounded-full object-cover h-[150px] md:h-[70px] w-[500px]"
               src={clint4}
               alt=""
             />

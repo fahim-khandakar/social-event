@@ -12,8 +12,8 @@ const ReasonsToChooseUs = () => {
   }, []);
   return (
     <div className="overflow-hidden">
-      <h1 className="text-2xl md:text-4xl font-bold mt-20 text-center">
-        Why Choose Us for Your Special Event?
+      <h1 className="text-2xl md:text-4xl font-bold mt-20 text-[#403f3f] font-serif text-center">
+        Why Choose Us For Your Special Event?
       </h1>
       <p className="pt-5 text-center mx-5 md:mx-auto">
         At Social Fiesta, we understand that your event is more than just an

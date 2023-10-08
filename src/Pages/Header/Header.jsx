@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import Profile from "../Profile/Profile";
 
 const Header = () => {
-  const { logOut, user, loading } = useContext(AuthContext);
+  const { logOut, user } = useContext(AuthContext);
   const signOut = () => {
     logOut().then().catch();
   };
@@ -24,14 +24,14 @@ const Header = () => {
   );
 
   return (
-    <div className="bg-[#1dc7bdaf] w-full ">
-      <div className="navbar font-serif text-[#105b57] mx-auto max-w-6xl px-5 md:px-0 ">
+    <div className="shadow-md w-full ">
+      <div className="navbar font-serif text-[#403f3f] mx-auto max-w-6xl px-5 md:px-0 ">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="mr-1 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -51,23 +51,23 @@ const Header = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-lg md:text-4xl font-serif">
+          <a className="font-semibold normal-case text-base md:text-4xl font-serif">
             Social Fiesta
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="gap-10 menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end gap-5">
+        <div className="navbar-end gap-2 md:gap-5">
           <Profile></Profile>
 
           <div>
             {user ? (
-              <li className="list-none">
+              <li className="list-none md:btn text-xs md:text-base md:btn-ghost">
                 <button onClick={signOut}>Sign Out</button>
               </li>
             ) : (
-              <li className="list-none">
+              <li className="list-none md:btn md:btn-ghost text-xs md:text-base">
                 <NavLink to="/login">Login</NavLink>
               </li>
             )}
