@@ -36,7 +36,7 @@ const Login = () => {
   return (
     <div className="max-w-6xl mx-auto p-5 md:p-0 mt-10">
       <div>
-        <h2 className="text-2xl md:text-4xl font-bold text-center">
+        <h2 className="text-2xl md:text-4xl font-bold font-serif text-center">
           Please Login
         </h2>
         <form

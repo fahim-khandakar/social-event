@@ -10,7 +10,7 @@ import men6 from "../../assets/men6.jpg";
 const TeamMember = () => {
   return (
     <div className="mt-16">
-      <h1 className="text-2xl md:text-4xl font-bold text-center">
+      <h1 className="text-2xl md:text-4xl font-serif font-bold text-center">
         Our Team Members
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
