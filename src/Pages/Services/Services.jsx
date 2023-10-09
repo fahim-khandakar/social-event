@@ -23,7 +23,7 @@ const Services = ({ item }) => {
         <div className="">
           <Link to={`/serviceDetails/${id}`}>
             <button className="py-1 bg-[#ffa500] w-full btn-ghost rounded-md text-white">
-              Read More
+              Details
             </button>
           </Link>
         </div>
